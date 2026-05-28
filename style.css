@@ -2,13 +2,18 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #191a1a; /* Evita parpadeos blancos antes de cargar el mapa */
 }
 
+/* CORRECCIÓN CLAVE: Forzamos al mapa a ocupar todo el alto visible */
 #map {
     position: absolute;
     top: 0;
     bottom: 0;
+    left: 0;
+    right: 0;
     width: 100%;
+    height: 100vh; 
 }
 
 .control-panel {
@@ -19,13 +24,14 @@ body {
     background-color: rgba(255, 255, 255, 0.95);
     padding: 15px 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    z-index: 10; /* Fuerza al panel a estar por encima del mapa siempre */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10; /* Obliga al panel a flotar por encima de las líneas del mapa */
 }
 
 .control-panel h3 {
     margin-top: 0;
     color: #333;
+    font-size: 1.2em;
 }
 
 #slider {
