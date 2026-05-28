@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolución Carriles Bici Barcelona</title>
+    <!-- Mapbox GL JS -->
+    <script src="https://mapbox.com"></script>
+    <link href="https://mapbox.com" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="map"></div>
+    
+    <div class="map-title">
+        <h2>Red de Carriles Bici</h2>
+        <p>Barcelona</p>
+    </div>
+
+    <!-- Contenedor del Control Deslizante Temporal -->
+    <div class="slider-container">
+        <input id="slider" type="range" min="0" max="2" step="1" value="2" />
+        <div class="slider-labels">
+            <span class="label-year">2017</span>
+            <span class="label-year">2024</span>
+            <span class="label-year">2025</span>
+        </div>
+    </div>
+
+    <script src="map.js"></script>
+</body>
+</html>
