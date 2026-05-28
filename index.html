@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <title>Evolución de Carriles Bici en Barcelona</title>
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-    
-    <!-- Hojas de estilo oficiales de Mapbox -->
-    <link href="https://mapbox.com" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Librería Javascript oficial de Mapbox (Cargada obligatoriamente antes de app.js) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evolución Carriles Bici Barcelona</title>
+    <!-- Mapbox GL JS -->
     <script src="https://mapbox.com"></script>
-    <script src="app.js" defer></script>
+    <link href="https://mapbox.com" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="map"></div>
+    
+    <!-- Título superior izquierdo opcional -->
+    <div class="map-title">
+        <h2>Red de Carriles Bici</h2>
+        <p>Barcelona</p>
+    </div>
 
-<div id="map"></div>
+    <!-- Contenedor del Control Deslizante Temporal -->
+    <div class="slider-container">
+        <input id="slider" type="range" min="0" max="2" step="1" value="2" />
+        <div class="slider-labels">
+            <span class="label-year">2017</span>
+            <span class="label-year">2024</span>
+            <span class="label-year">2025</span>
+        </div>
+    </div>
 
-<div class="control-panel">
-    <h3>Red Ciclista Barcelona</h3>
-    <p>Desplaza el selector para ver la evolución temporal:</p>
-    <input id="slider" type="range" min="0" max="2" step="1" value="0">
-    <div id="year-label">Año 2017</div>
-</div>
-
+    <script src="map.js"></script>
 </body>
 </html>
